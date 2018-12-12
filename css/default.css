@@ -1,0 +1,63 @@
+/* 1.S1 重置默认样式*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+*::before {box-sizing: border-box;}
+*::after {box-sizing: border-box;}
+
+/* 8.S2 设置代码区和效果区上下布局*/
+body {
+	display: flex; 
+	flex-direction: column;
+	height: 100vh;
+}
+
+.code-wrapper,
+.preview-wrapper {
+	flex: 1;
+  height: 50%;
+} 
+.code-wrapper {
+  padding: 10px;
+}
+
+/* 1.S2 preview部分*/
+.preview {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fee433;
+}
+
+/* 1.S3 整体face部分*/
+.face {
+	width: 100%;
+	height: 165px;
+	position: relative;
+	/*outline: 1px solid red;*/
+}
+
+/* 9 代码区固定 50%高度，多余隐藏*/
+.code {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 10 设置 代码区变速功能 按钮样式*/
+.btn-wrap {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-wrap > button {
+  padding: 8px;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+.btn-wrap > button.active {
+  background: #fee433;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+}
